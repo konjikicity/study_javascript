@@ -64,7 +64,8 @@ transition: fade-out
 <h2 class="py-12 font-bold text-red">やっぱり「進研ゼミ」</h2>
 
 <h3>
-    ちょっとでも記憶に残ってくれたら嬉しいです。
+    ちょっとでも記憶に残ってくれたら嬉しいです。<br>
+    ES2015以降の記法はわりとよく見かけるので、知っておくといいかも
 </h3>
 
 ---
@@ -384,12 +385,12 @@ layout: center
 transition: fade-out
 ---
 
-<h1 class="font-bold">変数宣言</h1>
+<h1 class="font-bold">letとconst</h1>
 
 <div class="flex">
 <div class="w-1/2 p-2">
 
-<h3 class="font-bold text-red py-6">var(旧)</h3>
+<h3 class="font-bold text-red py-6">var</h3>
 
 ```javascript
 
@@ -401,7 +402,7 @@ var hoge = 'onoda';
 </div>
 
 <div class="w-1/2 p-2">
-<h3 class="font-bold text-red py-6">letとconst(新)</h3>
+<h3 class="font-bold text-red py-6">letとconst</h3>
 
 ```javascript
 
@@ -430,8 +431,8 @@ transition: fade-out
 ```javascript
 
 // 宣言した時点では名前がないので無名関数と呼ばれる。
-// 名前のない関数を定義して変数onodaBMIに代入
 
+// 名前のない関数を定義して変数onodaBMIに代入
 const onodaBMI = function(weight,height){
  return weight + height * 2;
 };
@@ -464,4 +465,279 @@ const onodaBMI = () => weight * 172 * 2;
 </div>
 </div>
 
+---
+transition: fade-out
+---
 
+<h1 class="font-bold">テンプレートリテラル</h1>
+
+
+
+<h3 class="font-bold text-red py-6">文字列の展開が可能</h3>
+
+```javascript
+
+// バッククォート``で囲む文字列を${}の形で展開できる。
+
+const name = 'onoda';
+
+// 旧
+'私の名前は' + name + 'です。'
+
+// 新
+`私の名前は${name}です。`
+
+// \nを使用しなくても改行も可能
+const str = `私は歯医者が大嫌いですが、
+毎週通っています。`
+
+```
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">スプレッド構文</h1>
+
+<h3 class="font-bold text-red py-6">
+    反復可能な要素(文字列、配列、オブジェクト)を展開できる
+</h3>
+
+<div class="flex">
+
+
+<div class="w-1/2 p-2">
+
+```javascript
+// 文字列
+const str = 'onoda';
+const charArray = [...str];
+
+// => ['o', 'n', 'o', 'd', 'a']
+
+// 配列
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [...arr1, 6, 7];
+
+console.log(arr2);
+// => [1,2,3,4,5,6,7]
+
+```
+</div>
+
+<div class="w-1/2 p-2">
+
+```javascript
+// オブジェクト
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+
+const mergeObj = {...obj1, ...obj2}
+console.log(mergeObj)
+// => {a: 1, b: 2, c: 3, d: 4}
+```
+
+</div>
+
+</div>
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">分割代入</h1>
+
+<h3 class="font-bold text-red py-6">
+    一部分だけ代入して使用できる
+</h3>
+
+
+```javascript
+
+// 配列
+const arr = [1, 2, 3, 4];
+const [a, b] = arr;
+console.log(a,b)
+// => 1, 2
+
+// オブジェクト
+const obj = {id: 1, name: 'onoda'}
+const { name } = obj;
+console.log(name);
+// => 'onoda'
+
+```
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">オブジェクト初期化時のkey省略</h1>
+
+<h3 class="font-bold text-red py-6">
+    オブジェクトを定義する時、変数そのもので展開できる
+</h3>
+
+
+```javascript
+// 変数名と同じ名称でオブジェクトを定義
+
+const name = 'onoda';
+const obj = { name };
+consloe.log(obj);
+// => { name: 'onoda'};
+
+// スプレッド構文でまとめて展開も可能
+
+const params = { key1: 1, key2: 2}
+const obj = { ...params, key3: 3}
+console.log(obj);
+// => { key1: 1, key2: 2, key3: 3 };
+
+```
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">Null合体演算子</h1>
+
+<h3 class="font-bold text-red py-6">
+左辺がNullかundefinedの場合右辺を返す
+</h3>
+    
+```javascript
+
+null ?? 1;
+undefined ?? 1;
+// => 1
+
+false ?? 1;
+// => false
+
+0 ?? 1
+// => 0
+
+```
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">ORとAND演算子の注意点</h1>
+
+<p class="pt-2">「または」、「かつ」という意味ではない</p>
+
+<div class="flex">
+
+
+<div class="w-1/2 p-2">
+
+<h3 class="font-bold text-red py-6">OR演算子</h3>
+    
+```javascript
+// 左辺がfalsyな要素の場合、右辺を返す 
+
+null || 1;
+undefined || 1;
+false || 1;
+0 || 1
+
+// => 1
+
+```
+</div>
+
+<div class="w-1/2 p-2"> 
+
+<h3 class="font-bold text-red py-6">AND演算子</h3>
+
+```javascript
+// 左辺がtruthyな要素の場合、右辺を返す
+
+null && 1;
+undefined && 1;
+// null
+// undefined
+
+false && 1;
+// => false
+
+true && 1
+// => 1
+
+```
+</div>
+</div>
+
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">オプショナルチェイニング演算子</h1>
+
+<h3 class="font-bold text-red py-6">
+    nullやundefindで値が返される可能性がある時に使う
+</h3>
+
+
+```javascript
+const users = [
+  {
+    id: 1,
+    name: "Aron",
+  },
+  {
+    id: 2,
+    name: "Abel",
+  },
+  {
+    id: 3,
+    name: "Michael",
+  },
+];
+ 
+const user = users.find((user) => user.id === 4);
+console.log(user?.name);
+// => undefind(エラーにはならない) 
+
+```
+
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">まだまだある.....</h1>
+
+<h3 class="pt-12 font-bold text-red">Class構文, async/await, dynamic import...etc</h3>
+
+<p class="pt-12">第二回で詳しくできたらなと思います。</p>
+
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">おわりに</h1>
+<div>
+
+<p class="pt-6">結構なボリュームになってしまいましたが、</p>
+<p>今回の発表で再度、自分も復習できました。</p>
+<p>JavaScriptは奥が深く、今回紹介したのも一部ですが、</p>
+<p>構文等はよく出てくるものをチョイスしたので、ためになれば幸いです。</p>
+
+<h3 class="text-red pt-12">あとslidevで作るのはすごく楽しかったです。</h3>
+<p class="text-blue">https://ja.sli.dev</p>
+</div>
+
+
+---
+transition: fade-out
+layout: center
+---
+
+<h1 class="font-bold">ご静聴ありがとうございました。</h1>
+
+---
