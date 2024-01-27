@@ -2,7 +2,7 @@
 theme: seriph
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
-highlighter: shikiji
+highlighter: shiki
 lineNumbers: false
 transition: slide-left
 mdc: true
@@ -362,7 +362,6 @@ transition: fade-out
 <p>
     ソースコードを別のソースコードに変更するためのプログラム<br>
     ブラウザで動作させるために古い仕様の範囲内で解釈できる形に変換してくれる。<br>
-    ほんやくこんにゃく
 </p>
 
 <h3 class="font-bold text-red pt-6">なぜするのか？</h3>
@@ -382,3 +381,87 @@ layout: center
 </h1>
 
 ---
+transition: fade-out
+---
+
+<h1 class="font-bold">変数宣言</h1>
+
+<div class="flex">
+<div class="w-1/2 p-2">
+
+<h3 class="font-bold text-red py-6">var(旧)</h3>
+
+```javascript
+
+// 再宣言と再代入可能
+var hoge = 'syu';
+var hoge = 'onoda';
+
+```
+</div>
+
+<div class="w-1/2 p-2">
+<h3 class="font-bold text-red py-6">letとconst(新)</h3>
+
+```javascript
+
+// let 再代入のみ可能
+let hoge = 'syu';
+hoge = 'onoda';
+
+// const 再宣言と再代入不可
+const hoge = 'syu';
+
+```
+</div>
+</div>
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">アロー関数</h1>
+
+<div class="flex">
+<div class="w-1/2 p-2">
+
+<h3 class="font-bold text-red py-6">無名関数</h3>
+
+```javascript
+
+// 宣言した時点では名前がないので無名関数と呼ばれる。
+// 名前のない関数を定義して変数onodaBMIに代入
+
+const onodaBMI = function(weight,height){
+ return weight + height * 2;
+};
+
+```
+</div>
+
+<div class="w-1/2 p-2">
+<h3 class="font-bold text-red py-6">アロー関数</h3>
+
+```javascript
+
+// アロー関数とは無名関数をシンプルに書けるやつ
+const onodaBMI = (weight, height) => {
+  return weight + height * 2;
+};
+
+// 省略記法とルール
+
+// 1. 1文で終わる時は{}を省略可能
+const onodaBMI = (weight, height) => weight + height * 2;
+
+// 2. 引数が一個の時は()を省略可能
+const onodaBMI = weight => weight * 172 * 2;
+
+// 3. 引数がないときは()を省略せずに書く
+const onodaBMI = () => weight * 172 * 2;
+
+```
+</div>
+</div>
+
+
