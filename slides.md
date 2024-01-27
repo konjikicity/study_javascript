@@ -17,62 +17,70 @@ fonts:
 
 <h1 class="font-bold">Javascriptの歴史</h1>
 
+<p claas="pt-12">
 プロパー勉強会Vol2 by Ond
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Slidevを使って作っています。 <carbon:arrow-right class="inline"/>
-  </span>
-</div>
+</p>
 
 ---
 transition: fade-out
 ---
 
-# 目次
+<h1 class="font-bold">
+    目次
+</h1>
 
 <div class="pt-6"></div>
 
-1. JavaScriptって何？
+<p class="font-bold">
+1. JavaScriptの歴史　
+</p>
 
 <div class="pt-6"></div>
 
+<p class="font-bold">
 2. 代表的なライブラリとフレームワーク
+</p>
 
 <div class="pt-6"></div>
 
+<p class="font-bold">
 3. モダンJavaScriptとは
+</p>
 
 <div class="pt-6"></div>
 
-4. まとめ
+<p class="font-bold">
+4. ES2015以降の主要な記法の紹介
+</p>
 
 ---
 transition: fade-out
 ---
 
-# 今日のテーマ
+<h1 class="font-bold">
+今日のテーマ
+</h1>
 
 <h2 class="py-12 font-bold text-red">やっぱり「進研ゼミ」</h2>
 
-### ちょっとでも記憶に残ってくれたら嬉しいです。
-### 後半紹介する記法等
-
+<h3>
+    ちょっとでも記憶に残ってくれたら嬉しいです。
+</h3>
 
 ---
 transition: fade-out
 layout: center
 ---
 
-<h1 class="font-bold">JavaScriptって何？</h1>
+<h1 class="font-bold">JavaScriptの歴史</h1>
 
 ---
 transition: fade-out
 ---
 
-# JavaScript
+<h1 class="font-bold">JavaScript</h1>
 
-<h2 class="py-12 underline">基本的にはブラウザ上で動作するプログラミング言語</h2>
+<h2 class="py-12 font-bold text-red">基本的にはブラウザ上で動作するプログラミング言語</h2>
 
 HTML・CSSに追加して使用することで<br>
 Webページを動的にすることができる
@@ -82,16 +90,23 @@ Webページを動的にすることができる
 transition: fade-out
 ---
 
-# JavaScriptの誕生
+<h1 class="font-bold">JavaScriptの誕生</h1>
 
-<h2 class="py-12 underline">1995年にブレンダン・アイクさんが作った。</h2>
+<h2 class="py-12 font-bold text-red">1995年にブレンダン・アイクさんが作った。</h2>
 
 <div class="flex justify-center">
 <div class="mr-16">
+<div>
+<p>
+    NetScape Navigater(後のFireFox)というブラウザのために
+    開発された。<br>
+</p>
+</div>
 元々<span class="font-bold text-red">LiveScript</span>という名前だったが<br>
 1995年12月に<span class="font-bold text-red">JavaScript</span>として実装された。
 
-<div class="pt-12">
+
+<div class="pt-6">
 当時<span class="font-bold text-red">Java</span>が勢い付いており、<br>
 開発会社と提携していたので、名前を変えたらしい
 </div>
@@ -105,9 +120,9 @@ transition: fade-out
 transition: fade-out
 ---
 
-# JavaScript不遇の時代
+<h1 class="font-bold">JavaScriptの不遇の時代</h1>
 
-<h2 class="py-12 underline">誕生当初は不遇の時代が続いた</h2>
+<h2 class="py-12 font-bold text-red">誕生当初は不遇の時代が続いた</h2>
 
 - ブラウザ間の互換性
 
@@ -133,14 +148,14 @@ transition: fade-out
 transition: fade-out
 ---
 
-# ECMAScriptとは？
+<h1 class="font-bold">ECMAScript</h1>
 
-<h3 class="py-12 underline">JavaScriptの標準化を担当するECMAによって定義された標準仕様</h3>
+<h3 class="py-12 font-bold text-red">JavaScriptの標準化を担当するECMAによって定義された標準仕様</h3>
 
 - ブラウザ間の互換性
 <p>標準化されることで一定の互換性をブラウザ間で持てるようになった</p>
 
-<div class="pt-12"></div>
+<div class="pt-6"></div>
 
 - 現在
 <p>定期的にバージョンアップがされて、現在は毎年6月にリリースされる。<br>
@@ -150,9 +165,9 @@ ver5.1までは<span class="font-bold text-red">ES5</span>のような表示だ�
 transition: fade-out
 ---
 
-# どうやって人気になったのか？
+<h1 class="font-bold">JavaScriptの転換期</h1>
 
-<h2 class="py-12 underline">GoogleMaps</h2>
+<h2 class="font-bold text-red pt-12">GoogleMaps</h2>
 
 <div class="pt-12">
     2005年にGoogle社が<span class="font-bold text-red">GoogleMaps</span>を発表した<br>
@@ -169,9 +184,9 @@ JavaScriptが使用されたことで一気に人気に....
 transition: fade-out
 ---
 
-# Ajaxって何？
+<h1 class="font-bold">Ajax</h1>
 
-<h2 class="py-12 underline">非同期でJavaScriptを使ってサーバーと通信する仕組み</h2>
+<h3 class="font-bold text-red pt-12">非同期でJavaScriptを使ってサーバーと通信する仕組み</h3>
 
 A  → Asynchronous(非同期の)<br>
 Ja → JavaScript<br>
@@ -179,7 +194,7 @@ x  → XMLHttpRequest(JavaScript組み込みのHTTP通信できるAPI)<br>
 
 <div class="pt-12"></div>
 
-- 非同期とは？<br>
+- 非同期<br>
 → <span class="font-bold text-red">タスクの完了を待つことなく並列に処理を実行できる仕組み</span>
 
 例) メール処理、検索の候補表示、地図
@@ -196,7 +211,8 @@ layout: center
 transition: fade-out
 ---
 
-# JavaScriptの代表的なライブラリ
+<h1 class="font-bold">JavaScriptの代表的なライブラリ
+</h1>
 
 <h3 class="font-bold text-red pt-12">JQuery</h3>
 <p>JavaScriptの記述を簡単に書けるライブラリ</p>
@@ -213,8 +229,9 @@ transition: fade-out
 transition: fade-out
 ---
 
-# JavaScriptの代表的なフレームワーク
-
+<h1 class="font-bold">
+JavaScriptの代表的なフレームワーク
+</h1>
 <h3 class="font-bold text-red pt-12">Vue</h3>
 <p>HTMLの記述に近い形で記述が可能</p>
 
@@ -239,11 +256,11 @@ layout: center
 transition: fade-out
 ---
 
-# モダンJavaScriptの特徴
+<h1 class="font-bold">モダンJavaScriptの特徴</h1>
 
-<h3 class="font-bold underline py-12">明確なルールはないが、一般的には以下の特徴</h3>
+<h3 class="font-bold text-red pt-12">明確なルールはないが、一般的には以下の特徴</h3>
 
-<div class="pt-6"></div>
+<div class="pt-12"></div>
 
 - React、Vueなどの仮想DOMを使用するライブラリやフレームワークを使用
 
@@ -264,4 +281,104 @@ transition: fade-out
 - 主にES2015以降の記法を使用(かなり多くの便利な変更が入った)
 
 ---
+transition: fade-out
+---
 
+<h1 class="font-bold">仮想DOM</h1>
+
+<h3 class="font-bold text-red pt-6">DOM</h3>
+<p>
+    DOMとはHTMLのソースコード自体のことではなく、画面を表示する際に解釈した<br>
+    HTML/CSS/JavaScriptによって構築されたツリー型のオブジェクト<br>
+    JavaScript等で値を操作できる。
+</p>
+
+<h3 class="font-bold text-red pt-6">仮想DOM</h3>
+<p>
+    プログラム的に作成された仮のDOM
+</p>
+
+<h3 class="font-bold text-red pt-6">通常と仮想DOMの違い</h3>
+<p>
+    通常は変更が入るとDOMを再構築し再描画していたが、<br>
+    仮想DOMは変更を受け取ってもすぐには描画を行わず、<br>
+    変更を反映した仮想DOMと通常のDOMを比べて、<br>
+    変更差分だけを検出し、描画する。<br>
+</p>
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">パッケージマネージャー</h1>
+
+<h3 class="font-bold text-red pt-6">パッケージとは</h3>
+<p>
+   moduleをまとめて機能するようにしたもの<br>
+</p>
+
+<h3 class="font-bold text-red pt-6">npmとは</h3>
+<p>
+    Node.jsのパッケージ管理システム<br>
+    Facebookが作った互換性がある<span class="text-red">Yarn</span>もある
+</p>
+
+
+<h3 class="font-bold text-red pt-6">npmの必要性</h3>
+
+<div class="pt-4"></div>
+
+- パッケージの依存関係の解決
+- パッケージの競合関係
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">モジュールバンドラー</h1>
+
+<h3 class="font-bold text-red pt-6">webpack</h3>
+<p>
+   複数のモジュールの依存関係を解決して、一つにまとめてくれる<br>
+   後継で<span class="text-red">Vite</span>がある。
+</p>
+
+<h3 class="font-bold text-red pt-6">なぜするのか？</h3>
+<p>
+    モジュールの数が増えると、リクエストの数が増えるので、<br>
+    パフォーマンスが落ちる。<br>
+    <br>
+    開発時は、機能を分けて保守性高く<br>
+    実行するときは、機能をまとめてパフォーマンスを高くできる<br>
+</p>
+
+---
+transition: fade-out
+---
+
+<h1 class="font-bold">トランスパイラ</h1>
+
+<h3 class="font-bold text-red pt-6">Babel</h3>
+<p>
+    ソースコードを別のソースコードに変更するためのプログラム<br>
+    ブラウザで動作させるために古い仕様の範囲内で解釈できる形に変換してくれる。<br>
+    ほんやくこんにゃく
+</p>
+
+<h3 class="font-bold text-red pt-6">なぜするのか？</h3>
+<p>
+    新しい仕様のJavaScriptやTypeScriptなどで開発できる！<br>
+    <br>
+    トランスパイル → モジュールバンドルの流れ
+</p>
+
+---
+transition: fade-out
+layout: center
+---
+
+<h1 class="font-bold">
+    ES2015の主要記法の紹介
+</h1>
+
+---
