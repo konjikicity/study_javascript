@@ -216,7 +216,7 @@ transition: fade-out
 <h1 class="font-bold">JavaScriptの代表的なライブラリ
 </h1>
 
-<div class="flex items-center pt-12">
+<div class="flex items-center pt-6">
 <h3 class="font-bold text-red pr-6">JQuery</h3>
 <logos-jquery class="rounded bg-white w-20 h-10 p-2"/>
 </div>
@@ -244,7 +244,7 @@ transition: fade-out
 JavaScriptの代表的なフレームワーク
 </h1>
 
-<div class="flex items-center pt-12">
+<div class="flex items-center pt-6">
 <h3 class="font-bold text-red pr-6">Vue.js</h3>
 <logos-vue class="w-10 h-10"/>
 </div>
@@ -770,4 +770,3 @@ layout: center
 
 <h1 class="font-bold">ご静聴ありがとうございました。</h1>
 
----
