@@ -2,6 +2,7 @@
 theme: seriph
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
+download: true
 highlighter: shiki
 lineNumbers: false
 transition: slide-left
@@ -113,7 +114,7 @@ transition: fade-out
 </div>
 </div>
 
-<img border="rounded" width="400" height="400" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
+<img border="rounded" width="400" height="400" src="https://res.cloudinary.com/dzlhvpfmo/image/upload/v1705775996/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-01-21_3.38.59_mpqpms.png" alt="">
 
 </div>
 
@@ -215,15 +216,24 @@ transition: fade-out
 <h1 class="font-bold">JavaScriptの代表的なライブラリ
 </h1>
 
-<h3 class="font-bold text-red pt-12">JQuery</h3>
+<div class="flex items-center pt-12">
+<h3 class="font-bold text-red pr-6">JQuery</h3>
+<logos-jquery class="rounded bg-white w-20 h-10 p-2"/>
+</div>
 <p>JavaScriptの記述を簡単に書けるライブラリ</p>
 
-<h3 class="font-bold text-red pt-6">Node.js</h3>
+<div class="flex items-center">
+<h3 class="font-bold text-red pr-6">Node.js</h3>
+<logos-nodejs class="w-20 h-20"/>
+</div>
 <p>サーバーサイドでJavaScriptを実行できるようになる実行環境<br>
 最近はクライアントサイドの開発環境でも利用されるのが一般的<br>
 有名なパッケージマネージャーとして<span class="font-bold text-red">npm</span>と<span class="font-bold text-red">yarn</span>がある</p>
 
-<h3 class="font-bold text-red pt-6">TypeScript</h3>
+<div class="flex items-center">
+<h3 class="font-bold text-red pr-6">TypeScript</h3>
+<logos-typescript class="w-20 h-20"/>
+</div>
 <p>JavaScriptに型定義できるようにした静的型付言語</p>
 
 ---
@@ -233,14 +243,24 @@ transition: fade-out
 <h1 class="font-bold">
 JavaScriptの代表的なフレームワーク
 </h1>
-<h3 class="font-bold text-red pt-12">Vue</h3>
+
+<div class="flex items-center pt-12">
+<h3 class="font-bold text-red pr-6">Vue.js</h3>
+<logos-vue class="w-10 h-10"/>
+</div>
 <p>HTMLの記述に近い形で記述が可能</p>
 
-<h3 class="font-bold text-red pt-6">React(ReactNative)</h3>
+<div class="flex items-center pt-6">
+<h3 class="font-bold text-red pr-6">React(ReactNative).js</h3>
+<logos-react class="w-10 h-10"/>
+</div>
 <p>Viewを宣言的にコードを書けるのが特徴(JSX記法)<br>
 過程を書くのが手続き的、最終的な表示をかくのが宣言的</p>
 
-<h3 class="font-bold text-red pt-6">Next.js</h3>
+<div class="flex items-center pt-6">
+<h3 class="font-bold text-red pr-6">Next.js</h3>
+<logos-nextjs class="rounded w-20 p-2 h-10 bg-white" />
+</div>
 <p>Reactのフレームワークとして登場<br>
 現在はこちらの利用がかなり主流<br>
 SSR/SSG、画像最適化など様々な機能を持つフルスタックフレームワーク<br>
@@ -318,7 +338,10 @@ transition: fade-out
    moduleをまとめて機能するようにしたもの<br>
 </p>
 
-<h3 class="font-bold text-red pt-6">npmとは</h3>
+<div class="flex items-center pt-6"> 
+<h3 class="font-bold text-red pr-6">npmとは</h3>
+<logos-npm class="w-20"/>
+</div>
 <p>
     Node.jsのパッケージ管理システム<br>
     Facebookが作った互換性がある<span class="text-red">Yarn</span>もある
@@ -338,7 +361,10 @@ transition: fade-out
 
 <h1 class="font-bold">モジュールバンドラー</h1>
 
-<h3 class="font-bold text-red pt-6">webpack</h3>
+<div class="flex items-center pt-12">
+<h3 class="font-bold text-red">webpack</h3>
+<logos-webpack class="w-20 h-10"/>
+</div>
 <p>
    複数のモジュールの依存関係を解決して、一つにまとめてくれる<br>
    後継で<span class="text-red">Vite</span>がある。
@@ -359,7 +385,11 @@ transition: fade-out
 
 <h1 class="font-bold">トランスパイラ</h1>
 
-<h3 class="font-bold text-red pt-6">Babel</h3>
+
+<div class="flex items-center pt-12">
+<h3 class="font-bold text-red pr-6">Babel</h3>
+<logos-babel class="w-20 h-10"/>
+</div>
 <p>
     ソースコードを別のソースコードに変更するためのプログラム<br>
     ブラウザで動作させるために古い仕様の範囲内で解釈できる形に変換してくれる。<br>
