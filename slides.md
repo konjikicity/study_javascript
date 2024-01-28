@@ -5,7 +5,8 @@ class: text-center
 download: true
 colorSchema: 'dark'
 highlighter: shiki
-lineNumbers: false
+title: '第一回Javascript勉強会'
+lineNumbers: true
 transition: slide-left
 mdc: true
 fonts:
@@ -424,11 +425,9 @@ transition: fade-out
 <h3 class="font-bold text-red py-6">var</h3>
 
 ```javascript
-
 // 再宣言と再代入可能
 var hoge = 'syu';
 var hoge = 'onoda';
-
 ```
 </div>
 
@@ -436,14 +435,12 @@ var hoge = 'onoda';
 <h3 class="font-bold text-red py-6">letとconst</h3>
 
 ```javascript
-
 // let 再代入のみ可能
 let hoge = 'syu';
 hoge = 'onoda';
 
 // const 再宣言と再代入不可
 const hoge = 'syu';
-
 ```
 </div>
 </div>
@@ -460,10 +457,7 @@ transition: fade-out
 <h3 class="font-bold text-red py-6">無名関数</h3>
 
 ```javascript
-
 // 宣言した時点では名前がないので無名関数と呼ばれる。
-
-// 名前のない関数を定義して変数onodaBMIに代入
 const onodaBMI = function(weight,height){
  return weight + height * 2;
 };
@@ -475,13 +469,10 @@ const onodaBMI = function(weight,height){
 <h3 class="font-bold text-red py-6">アロー関数</h3>
 
 ```javascript
-
 // アロー関数とは無名関数をシンプルに書けるやつ
 const onodaBMI = (weight, height) => {
   return weight + height * 2;
 };
-
-// 省略記法とルール
 
 // 1. 1文で終わる時は{}を省略可能
 const onodaBMI = (weight, height) => weight + height * 2;
@@ -502,14 +493,10 @@ transition: fade-out
 
 <h1 class="font-bold">テンプレートリテラル</h1>
 
-
-
 <h3 class="font-bold text-red py-6">文字列の展開が可能</h3>
 
 ```javascript
-
 // バッククォート``で囲む文字列を${}の形で展開できる。
-
 const name = 'onoda';
 
 // 旧
@@ -544,6 +531,7 @@ transition: fade-out
 const str = 'onoda';
 const charArray = [...str];
 
+console.log(charArray);
 // => ['o', 'n', 'o', 'd', 'a']
 
 // 配列
@@ -564,6 +552,7 @@ const obj1 = {a: 1, b: 2};
 const obj2 = {c: 3, d: 4};
 
 const mergeObj = {...obj1, ...obj2}
+
 console.log(mergeObj)
 // => {a: 1, b: 2, c: 3, d: 4}
 ```
@@ -584,19 +573,19 @@ transition: fade-out
 
 
 ```javascript
-
 // 配列
 const arr = [1, 2, 3, 4];
 const [a, b] = arr;
+
 console.log(a,b)
 // => 1, 2
 
 // オブジェクト
 const obj = {id: 1, name: 'onoda'}
 const { name } = obj;
+
 console.log(name);
 // => 'onoda'
-
 ```
 
 ---
@@ -612,16 +601,16 @@ transition: fade-out
 
 ```javascript
 // 変数名と同じ名称でオブジェクトを定義
-
 const name = 'onoda';
 const obj = { name };
+
 consloe.log(obj);
 // => { name: 'onoda'};
 
 // スプレッド構文でまとめて展開も可能
-
 const params = { key1: 1, key2: 2}
 const obj = { ...params, key3: 3}
+
 console.log(obj);
 // => { key1: 1, key2: 2, key3: 3 };
 
@@ -638,7 +627,6 @@ transition: fade-out
 </h3>
     
 ```javascript
-
 null ?? 1;
 undefined ?? 1;
 // => 1
@@ -730,6 +718,7 @@ const users = [
 ];
  
 const user = users.find((user) => user.id === 4);
+
 console.log(user?.name);
 // => undefind(エラーにはならない) 
 
