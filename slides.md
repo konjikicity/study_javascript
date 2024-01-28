@@ -96,14 +96,14 @@ transition: fade-out
 
 <h1 class="font-bold">JavaScriptの誕生</h1>
 
-<h2 class="py-12 font-bold text-red">1995年にブレンダン・アイクさんが作った。</h2>
+<h2 class="py-12 font-bold text-red">1995年にNetScape社のブレンダン・アイクさんが作った。</h2>
 
 <div class="flex justify-center">
 <div class="mr-16">
 <div>
 <p>
-    NetScape Navigater(後のFireFox)というブラウザのために
-    開発された。<br>
+    NetScape Navigater(後のFireFox)という<br>
+    ブラウザのために開発された。
 </p>
 </div>
 元々<span class="font-bold text-red">LiveScript</span>という名前だったが<br>
@@ -116,7 +116,7 @@ transition: fade-out
 </div>
 </div>
 
-<img border="rounded" width="400" height="400" src="https://res.cloudinary.com/dzlhvpfmo/image/upload/v1705775996/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-01-21_3.38.59_mpqpms.png" alt="">
+<img border="rounded" width="300" height="200" src="https://res.cloudinary.com/dzlhvpfmo/image/upload/v1706443493/xah8ykw9ixkbtd7tytd8.png" alt="">
 
 </div>
 
