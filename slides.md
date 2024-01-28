@@ -3,6 +3,7 @@ theme: seriph
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 download: true
+colorSchema: 'dark'
 highlighter: shiki
 lineNumbers: false
 transition: slide-left
