@@ -5,7 +5,7 @@ class: text-center
 download: true
 colorSchema: 'dark'
 highlighter: shiki
-title: '第一回Javascript勉強会'
+title: '第一回JavaScript勉強会'
 lineNumbers: true
 transition: slide-left
 mdc: true
@@ -18,7 +18,7 @@ fonts:
   mono: 'Fira Code'
 ---
 
-<h1 class="font-bold">Javascriptの歴史</h1>
+<h1 class="font-bold">JavaScriptの歴史</h1>
 
 <p claas="pt-12">
 プロパー勉強会Vol2 by Ond
@@ -219,7 +219,7 @@ transition: fade-out
 </h1>
 
 <div class="flex items-center pt-6">
-<h3 class="font-bold text-red pr-6">JQuery</h3>
+<h3 class="font-bold text-red pr-6">jQuery</h3>
 <logos-jquery class="rounded bg-white w-20 h-10 p-2"/>
 </div>
 <p>JavaScriptの記述を簡単に書けるライブラリ</p>
@@ -478,10 +478,10 @@ const onodaBMI = (weight, height) => {
 const onodaBMI = (weight, height) => weight + height * 2;
 
 // 2. 引数が一個の時は()を省略可能
-const onodaBMI = weight => weight * 172 * 2;
+const onodaBMI = weight => weight + 172 * 2;
 
 // 3. 引数がないときは()を省略せずに書く
-const onodaBMI = () => weight * 172 * 2;
+const onodaBMI = () => weight + 172 * 2;
 
 ```
 </div>
